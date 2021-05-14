@@ -1,0 +1,15 @@
+C:\Users\Дмитрий\source\repos\MadeInHaven\MadeInHaven\bin\Debug\netcoreapp3.1\MadeInHaven.exe
+C:\Users\Дмитрий\source\repos\MadeInHaven\MadeInHaven\bin\Debug\netcoreapp3.1\MadeInHaven.deps.json
+C:\Users\Дмитрий\source\repos\MadeInHaven\MadeInHaven\bin\Debug\netcoreapp3.1\MadeInHaven.runtimeconfig.json
+C:\Users\Дмитрий\source\repos\MadeInHaven\MadeInHaven\bin\Debug\netcoreapp3.1\MadeInHaven.runtimeconfig.dev.json
+C:\Users\Дмитрий\source\repos\MadeInHaven\MadeInHaven\bin\Debug\netcoreapp3.1\MadeInHaven.dll
+C:\Users\Дмитрий\source\repos\MadeInHaven\MadeInHaven\bin\Debug\netcoreapp3.1\MadeInHaven.pdb
+C:\Users\Дмитрий\source\repos\MadeInHaven\MadeInHaven\obj\Debug\netcoreapp3.1\MadeInHaven.csprojAssemblyReference.cache
+C:\Users\Дмитрий\source\repos\MadeInHaven\MadeInHaven\obj\Debug\netcoreapp3.1\MadeInHaven.Form1.resources
+C:\Users\Дмитрий\source\repos\MadeInHaven\MadeInHaven\obj\Debug\netcoreapp3.1\MadeInHaven.csproj.GenerateResource.cache
+C:\Users\Дмитрий\source\repos\MadeInHaven\MadeInHaven\obj\Debug\netcoreapp3.1\MadeInHaven.AssemblyInfoInputs.cache
+C:\Users\Дмитрий\source\repos\MadeInHaven\MadeInHaven\obj\Debug\netcoreapp3.1\MadeInHaven.AssemblyInfo.cs
+C:\Users\Дмитрий\source\repos\MadeInHaven\MadeInHaven\obj\Debug\netcoreapp3.1\MadeInHaven.csproj.CoreCompileInputs.cache
+C:\Users\Дмитрий\source\repos\MadeInHaven\MadeInHaven\obj\Debug\netcoreapp3.1\MadeInHaven.dll
+C:\Users\Дмитрий\source\repos\MadeInHaven\MadeInHaven\obj\Debug\netcoreapp3.1\MadeInHaven.pdb
+C:\Users\Дмитрий\source\repos\MadeInHaven\MadeInHaven\obj\Debug\netcoreapp3.1\MadeInHaven.genruntimeconfig.cache

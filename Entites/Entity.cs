@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
+using MadeInHaven.Controllers;
 
 namespace MadeInHaven.Entites
 {
@@ -48,8 +49,8 @@ namespace MadeInHaven.Entites
         }
         public void Move()
         {
-            posX += dirX;
-            posY += dirY;
+                posX += dirX;
+                posY += dirY;
         }
         
         public void PlayAnimation(Graphics g)

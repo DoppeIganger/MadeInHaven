@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using MadeInHaven.Controllers;
 using MadeInHaven.Entites;
 using MadeInHaven.Sprites;
+//using MadeInHaven.Models;
 
 namespace MadeInHaven
 {
@@ -19,6 +20,8 @@ namespace MadeInHaven
         public Image gladiator;
         public Image playerImage;
         public Entity player;
+        //public MonsterEntity monster;
+        public Image monsters;
         public Form1()
         {
             InitializeComponent();
@@ -33,33 +36,50 @@ namespace MadeInHaven
 
         public void OnKeyUp(object sender, KeyEventArgs e)
         {
-            player.dirX = 0;
-            player.dirY = 0;
-            player.isMoving = false;
-            player.SetAnimation(0);
+            switch (e.KeyCode)
+            {
+                case Keys.W:
+                    player.dirY = 0;
+                    break;
+                case Keys.S:
+                    player.dirY = 0;
+                    break;
+                case Keys.A:
+                    player.dirX = 0;
+                    break;
+                case Keys.D:
+                    player.dirX = 0;
+                    break;
+            }
+
+            if (player.dirX == 0 && player.dirY == 0)
+            {
+                player.isMoving = false;
+                player.SetAnimation(0);
+            }
         }
         public void OnPress(object sender, KeyEventArgs e)
         {
             switch(e.KeyCode)
             {
                 case Keys.W:
-                    player.dirY = -2;
+                    player.dirY = -3;
                     player.isMoving = true;
                     player.SetAnimation(1);
                     break;
                 case Keys.S:
-                    player.dirY = 2;
+                    player.dirY = 3;
                     player.isMoving = true;
                     player.SetAnimation(1);
                     break;
                 case Keys.A:
-                    player.dirX = -2;
+                    player.dirX = -3;
                     player.isMoving = true;
                     player.flip = -1;
                     player.SetAnimation(1);
                     break;
                 case Keys.D:
-                    player.dirX = 2;
+                    player.dirX = 3;
                     player.isMoving = true;
                     player.flip = 1;
                     player.SetAnimation(1);
@@ -74,28 +94,40 @@ namespace MadeInHaven
         }
 
         private void Init()/*C:\\Users\\Дмитрий\\source\\repos\\MadeInHaven\\MadeInHaven\\Sprites\\MainSprites\\Gladiator.png*/
-         {
+        {
             Mapcontroller.Init();
             this.Width = Mapcontroller.GetWidth();
             this.Height = Mapcontroller.GetHeidth();
             gladiator = new Bitmap(Path.Combine(new DirectoryInfo(Directory.GetCurrentDirectory()).Parent.Parent.Parent.FullName.ToString(), "Sprites\\MainSprites\\Gladiator.png"));
 
-            player = new Entity(100, 100, Hero.idleFrames, Hero.diedFrames,Hero.hurtFrames, Hero.walkFrames, Hero.attackFrames, gladiator);
+            player = new Entity(60, 50, Hero.idleFrames, Hero.diedFrames,Hero.hurtFrames, Hero.walkFrames, Hero.attackFrames, gladiator);
             timer1.Start();
         }
+        //private void MonsterInit()/*C:\\Users\\Дмитрий\\source\\repos\\MadeInHaven\\MadeInHaven\\Sprites\\MainSprites\\Gladiator.png*/
+        //{
+        //    Mapcontroller.Init();
+        //    this.Width = Mapcontroller.GetWidth();
+        //    this.Height = Mapcontroller.GetHeidth();
+        //    monsters = new Bitmap(Path.Combine(new DirectoryInfo(Directory.GetCurrentDirectory()).Parent.Parent.Parent.FullName.ToString(), "Sprites\\MainSprites\\sheet-enemies (1).png"));
+
+        //    monster = new Entity(500, 500, Monsters.walkFrames, monsters);
+        //    timer1.Start();
+        //}
 
         private void OnPaint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
             Mapcontroller.DrawMap(g);
             player.PlayAnimation(g);
-            
         }
 
         public void Update(object sender, EventArgs e)
         {
-            if (player.isMoving)
-                player.Move();
+            if (!(PhysicsCont.IsCollide(player,new Point(player.dirX, player.dirY)))) 
+            {
+                if (player.isMoving)
+                    player.Move();
+            }
             Invalidate();
         }
 
